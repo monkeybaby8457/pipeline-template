@@ -3,8 +3,7 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        sh 'mvn --version'
-        git(url: 'https://gitscm.cisco.com/scm/csit/devops-portal-2.git', branch: 'master', credentialsId: 'jqun')
+        git(url: 'https://gitscm.cisco.com/scm/csit/devops-portal-2.git', branch: 'master', credentialsId: '6ebf20cb-55ec-4263-b040-c70b339c7f1e')
       }
     }
   }
