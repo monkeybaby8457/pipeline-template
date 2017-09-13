@@ -10,6 +10,13 @@ pipeline {
     stage('compile') {
       steps {
         sh '''if [ "$Api-gateway" = "true" ]; then
+
+
+
+
+
+
+
 mvn -e --projects Api-gateway clean -P prod org.jacoco:jacoco-maven-plugin:prepare-agent install'''
       }
     }
