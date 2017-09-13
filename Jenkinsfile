@@ -3,7 +3,8 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        git(url: 'https://gitscm.cisco.com/scm/~jqun/portal2.git', branch: 'master', credentialsId: '0cca2a62-8d55-4a0b-a4d4-e49f60d9393b', changelog: true, poll: true)
+        sh 'git config --system core.longpaths true'
+        git(credentialsId: '0cca2a62-8d55-4a0b-a4d4-e49f60d9393b', url: 'https://gitscm.cisco.com/scm/~jqun/portal2.git', branch: 'master', changelog: true, poll: true)
       }
     }
   }
